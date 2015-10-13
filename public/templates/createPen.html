@@ -1,0 +1,16 @@
+<div ng-controller="AddPenController as vm">
+   <form class="well container" ng-submit="vm.createPen()">
+      <label>Name</label>
+      <input class="form-control" ng-model="vm.pen.name" title="Name" />
+      <br>
+      <label>Color</label>
+      <input class="form-control" ng-model="vm.pen.color" title="Color" />
+      <br>
+      <label>Image URL</label>
+      <input class="form-control" ng-model="vm.pen.img" title="Image" />
+      <br>
+      <div style="text-align:right">
+         <button type="submit" class="btn btn-primary btn-sm" ng-disabled="!vm.pen.name || !vm.pen.color || !vm.pen.img">Submit</button>
+      </div>
+   </form>
+</div>

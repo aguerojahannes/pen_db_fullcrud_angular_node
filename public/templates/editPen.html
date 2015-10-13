@@ -1,0 +1,14 @@
+<div ng-controller="EditPenController as vm">
+   <br><br><br>
+   <form class="well container"  ng-submit="vm.editPen()">
+      <label>Name</label>
+      <input class="form-control" ng-model="vm.pen.name" placeholder="Name" required>
+      <label>Color</label>
+      <input class="form-control" ng-model="vm.pen.color" placeholder="Color" required>
+      <label>Image URL</label>
+      <input class="form-control" ng-model="vm.pen.img" placeholder="Image URL" required>
+      <div style="text-align:right;">
+         <button type="submit" class="btn btn-xs btn-success">Submit</button>
+      </div>
+   </form>
+</div>

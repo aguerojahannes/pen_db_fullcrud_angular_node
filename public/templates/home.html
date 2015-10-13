@@ -1,0 +1,17 @@
+<div ng-controller="HomeController as vm">
+
+
+   <div class="well container" ng-repeat="p in vm.pens">
+      <div class="col-sm-3">
+         <img ng-src="{{p.img}}" alt="{{p.name}}" class="img-responsive" />
+      </div>
+      <div class="col-sm-9">
+         <h3>{{p.name}}</h3>
+         <h2><i>{{p.color}}</i></h2>
+         <div>
+            <button type="button" ui-sref="EditPen({id:p.id})" class="btn btn-sm btn-success">Edit</button>
+            <button type="button" ng-click="vm.deletePen(p)" class="btn btn-sm btn-success">Delete</button>
+         </div>
+      </div>
+   </div>
+</div>
